@@ -178,8 +178,13 @@ class AclProviderTest extends TestCase
                         'class_type' => '?',
                     ]
                 )
-                ->setParameters($data)
-                ->executeStatement();
+                ->setParameters($data);
+
+            if (method_exists($qb, 'executeQuery')) {
+                $qb->executeQuery();
+            } else {
+                $qb->execute();
+            }
         }
 
         foreach ($this->getSidData() as $data) {
@@ -192,8 +197,13 @@ class AclProviderTest extends TestCase
                         'username' => '?',
                     ]
                 )
-                ->setParameters($data)
-                ->executeStatement();
+                ->setParameters($data);
+
+            if (method_exists($qb, 'executeQuery')) {
+                $qb->executeQuery();
+            } else {
+                $qb->execute();
+            }
         }
 
         foreach ($this->getOidData() as $data) {
@@ -208,8 +218,13 @@ class AclProviderTest extends TestCase
                         'entries_inheriting' => '?',
                     ]
                 )
-                ->setParameters($data)
-                ->executeStatement();
+                ->setParameters($data);
+
+            if (method_exists($qb, 'executeQuery')) {
+                $qb->executeQuery();
+            } else {
+                $qb->execute();
+            }
         }
 
         foreach ($this->getEntryData() as $data) {
@@ -230,8 +245,13 @@ class AclProviderTest extends TestCase
                         'audit_failure' => '?',
                     ]
                 )
-                ->setParameters($data)
-                ->executeStatement();
+                ->setParameters($data);
+
+            if (method_exists($qb, 'executeQuery')) {
+                $qb->executeQuery();
+            } else {
+                $qb->execute();
+            }
         }
 
         foreach ($this->getOidAncestorData() as $data) {
@@ -243,8 +263,13 @@ class AclProviderTest extends TestCase
                         'ancestor_id' => '?',
                     ]
                 )
-                ->setParameters($data)
-                ->executeStatement();
+                ->setParameters($data);
+            
+            if (method_exists($qb, 'executeQuery')) {
+                $qb->executeQuery();
+            } else {
+                $qb->execute();
+            }
         }
     }
 
