@@ -149,7 +149,7 @@ class AclProviderTest extends TestCase
     protected function setUp(): void
     {
         $configuration = new Configuration();
-        if (\method_exists($configuration, 'setSchemaManagerFactory')) {
+        if (method_exists($configuration, 'setSchemaManagerFactory')) {
             $configuration->setSchemaManagerFactory(new DefaultSchemaManagerFactory());
         }
 
@@ -264,7 +264,7 @@ class AclProviderTest extends TestCase
                     ]
                 )
                 ->setParameters($data);
-            
+
             if (method_exists($qb, 'executeQuery')) {
                 $qb->executeQuery();
             } else {
