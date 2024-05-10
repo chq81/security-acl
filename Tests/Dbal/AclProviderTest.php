@@ -179,7 +179,7 @@ class AclProviderTest extends TestCase
                     ]
                 )
                 ->setParameters($data)
-                ->executeQuery();
+                ->executeStatement();
         }
 
         foreach ($this->getSidData() as $data) {
@@ -193,7 +193,7 @@ class AclProviderTest extends TestCase
                     ]
                 )
                 ->setParameters($data)
-                ->executeQuery();
+                ->executeStatement();
         }
 
         foreach ($this->getOidData() as $data) {
@@ -209,7 +209,7 @@ class AclProviderTest extends TestCase
                     ]
                 )
                 ->setParameters($data)
-                ->executeQuery();
+                ->executeStatement();
         }
 
         foreach ($this->getEntryData() as $data) {
@@ -231,7 +231,7 @@ class AclProviderTest extends TestCase
                     ]
                 )
                 ->setParameters($data)
-                ->executeQuery();
+                ->executeStatement();
         }
 
         foreach ($this->getOidAncestorData() as $data) {
@@ -244,7 +244,7 @@ class AclProviderTest extends TestCase
                     ]
                 )
                 ->setParameters($data)
-                ->executeQuery();
+                ->executeStatement();
         }
     }
 
